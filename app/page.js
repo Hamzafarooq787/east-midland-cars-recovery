@@ -40,7 +40,7 @@ export default function Home() {
         <Link href="/services" className="text-link">All services <Icon name="arrow" size={18}/></Link>
       </div>
       <ul className="service-grid">{services.map(({ name, slug, text }) => <li key={slug}>
-        <Link href={`/services#${slug}`} className="service-card">
+        <Link href={`/services/${slug}`} className="service-card">
           <Image src={`/images/${slug}.webp`} alt="" width={508} height={508} sizes="(max-width: 480px) 46vw, (max-width: 1000px) 32vw, 20vw"/>
           <div className="service-copy"><h3>{name}</h3><p>{text}</p><Icon name="arrow" size={18}/></div>
         </Link>

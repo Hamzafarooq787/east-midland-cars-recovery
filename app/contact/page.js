@@ -1,4 +1,6 @@
 import Contact from '../../components/contact';
+import Motion from '../../components/motion';
+import { Coverage, PageIntro, RecoveryCta } from '../../components/page-sections';
 
 export const metadata = {
   title: 'Contact Us',
@@ -7,5 +9,15 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  return <div className="wrap subpage"><h1>Contact us</h1><Contact/></div>;
+  return <>
+    <Motion/>
+    <PageIntro label="24/7 enquiries" title="Contact us">
+      Call, send a WhatsApp message or use the form to request a recovery quote.
+    </PageIntro>
+    <div className="wrap section page-stack">
+      <section aria-label="Contact details and quotation form" data-reveal><Contact showAddress/></section>
+      <Coverage/>
+      <RecoveryCta title="Ready to arrange recovery?"/>
+    </div>
+  </>;
 }
