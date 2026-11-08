@@ -71,12 +71,12 @@ export default function Home() {
           <p>We cover Nottingham, Derby, Leicester and surrounding areas. Share your pickup location to check availability.</p>
           <Link href="/contact" className="text-link">Check your location <Icon name="arrow" size={18}/></Link>
         </div>
-        <svg className="area-map" viewBox="0 0 340 166" role="img" aria-label="Schematic of the service area showing Derby, Nottingham and Leicester">
-          <path d="M54 46 95 24 126 29 165 11 209 28 253 21 285 51 281 92 310 118 271 139 216 136 187 155 143 137 112 144 88 116 55 105 35 78Z" fill="#d6eaff" stroke="#a0c9f4" strokeWidth="2"/>
-          <path d="m100 69 85-18-12 61-73-43" fill="none" stroke="#78a8de" strokeWidth="2" strokeDasharray="5 5"/>
-          <g fill="#0759cb" stroke="white" strokeWidth="3"><circle cx="100" cy="69" r="8"/><circle cx="185" cy="51" r="8"/><circle cx="173" cy="112" r="8"/></g>
-          <g fill="#101d3e" fontSize="14" fontWeight="700"><text x="56" y="66">Derby</text><text x="199" y="55">Nottingham</text><text x="187" y="117">Leicester</text></g>
-        </svg>
+        <iframe
+          className="area-map"
+          src="https://www.google.com/maps?q=East+Midlands,+UK&output=embed"
+          title="Google Maps showing our East Midlands recovery service area"
+          loading="lazy"
+        />
       </div>
     </section>
 

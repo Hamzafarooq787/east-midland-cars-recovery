@@ -1,5 +1,5 @@
-import { business } from '../components/site';
+import { SITE_URL } from '../components/site';
 
 export default function robots() {
-  return { rules: { userAgent: '*', allow: '/' }, sitemap: `${business.url}/sitemap.xml` };
+  return { rules: { userAgent: '*', allow: '/' }, sitemap: `${SITE_URL}/sitemap.xml` };
 }

@@ -1,10 +1,12 @@
+export const SITE_URL = 'https://east-midland-cars-recovery-lq16.vercel.app';
+
 export const business = {
   name: 'East Midland Cars Recovery and Breakdown 24/7',
   phone: '07000 000000',
   tel: 'tel:+447000000000',
   whatsapp: 'https://wa.me/447000000000',
   email: 'info@eastmidlandcarsrecovery.co.uk',
-  url: process.env.SITE_URL || 'https://eastmidlandcarsrecovery.co.uk',
+  url: SITE_URL,
 };
 
 export const services = [

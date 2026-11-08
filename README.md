@@ -13,5 +13,5 @@ npm run build
 
 The Local Assist homepage uses temporary contact details in `components/site.js`.
 The site currently emits a noindex directive while those details are temporary.
-Set `SITE_URL` to the confirmed canonical origin before launch, update the contact
-details, and review the indexing directive in `app/layout.js`.
+The canonical origin is set by `SITE_URL` in `components/site.js`. Before launch,
+update the contact details and review the indexing directive in `app/layout.js`.

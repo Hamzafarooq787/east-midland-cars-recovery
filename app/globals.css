@@ -71,7 +71,7 @@ button, summary { cursor: pointer; }
 .trust svg { color: var(--blue); flex-shrink: 0; }
 .trust span { display: block; color: var(--muted); font-size: .88rem; }
 .coverage { background: #e9f4ff; border-radius: var(--radius); display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: 16px; padding: clamp(22px, 4vw, 52px); }
-.area-map { width: 100%; max-height: 220px; }
+.area-map { display: block; width: 100%; height: clamp(180px, 25vw, 220px); border: 0; border-radius: var(--radius); }
 .faq { display: grid; grid-template-columns: 1fr 2fr; gap: 18px; }
 details { border: 1px solid var(--line); border-radius: 8px; }
 details + details { margin-top: 8px; }

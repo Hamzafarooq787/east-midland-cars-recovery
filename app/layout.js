@@ -1,16 +1,13 @@
 import Link from 'next/link';
 import Header, { Brand } from '../components/header';
 import { FloatingActions } from '../components/actions';
-import { business, nav } from '../components/site';
+import { business, nav, SITE_URL } from '../components/site';
 import './globals.css';
 
-const socialImage = new URL(
-  '/images/og-image.jpg',
-  process.env.SITE_URL || 'https://east-midland-cars-recovery.vercel.app',
-).href;
+const socialImage = new URL('/images/og-image.jpg', SITE_URL).href;
 
 export const metadata = {
-  metadataBase: new URL(business.url),
+  metadataBase: new URL(SITE_URL),
   title: { default: '24/7 Car Recovery in the East Midlands', template: '%s | East Midland Cars Recovery' },
   description: '24/7 car recovery, breakdown assistance and towing in Nottingham, Derby, Leicester and surrounding areas.',
   openGraph: {
