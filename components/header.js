@@ -1,15 +1,22 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRef, useState } from 'react';
 import { Icon } from './icons';
 import { business, nav } from './site';
 
-export function Brand() {
-  return <Link className="brand" href="/" aria-label="East Midland Cars Recovery home">
-    <span className="brand-icon"><Icon name="truck" size={34}/></span>
-    <span><strong>East Midland <b>Cars</b></strong><small>Recovery and Breakdown 24/7</small></span>
+export function Brand({ preload = false }) {
+  return <Link className="brand" href="/">
+    <Image
+      src="/images/logo.webp"
+      alt="East Midland Cars Recovery and Breakdown 24/7"
+      width={900}
+      height={255}
+      sizes={preload ? '(max-width: 760px) 128px, 156px' : '156px'}
+      preload={preload}
+    />
   </Link>;
 }
 
@@ -24,7 +31,7 @@ export default function Header() {
     }
   }}>
     <div className="wrap header-inner">
-      <Brand/>
+      <Brand preload/>
       <button ref={button} className="menu-toggle" type="button" aria-expanded={open} aria-controls="primary-menu" onClick={() => setOpen(!open)}>
         <Icon name={open ? 'close' : 'menu'}/><span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
       </button>
